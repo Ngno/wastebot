@@ -44,7 +44,7 @@ def visual_model(prompt, image):
 def llm_model(prompt):
     response = Application.call(app_id,
                                 prompt=prompt,
-                                api_key,)
+                                api_key=api_key)
 
     if response.status_code != HTTPStatus.OK:
         return response.message
